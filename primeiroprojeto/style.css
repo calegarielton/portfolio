@@ -4,8 +4,8 @@
   --purple: #5280e2;
   --green: #15cdcb;
   --bg-dark: #212226;
-  --light-grey: #E0DEDE;
-  --menu-height: 75px
+  --light-grey: #e0dede;
+  --menu-height: 75px;
 }
 
 body,
@@ -44,7 +44,7 @@ h2 {
   font-weight: 400;
 }
 
-p{
+p {
   color: var(--light-grey);
 }
 
@@ -69,15 +69,19 @@ header .container {
   padding: 0 100px;
 }
 
-header .container h1{
+header .container img {
+  display: none;
+}
+
+header .container h1 {
   color: var(--green);
 }
 
-header .container button{
+header .container button {
   margin-top: 40px;
 }
 
-nav{
+nav {
   display: flex;
   height: var(--menu-height);
   align-items: center;
@@ -88,18 +92,69 @@ nav{
   background-color: var(--bg-dark);
 }
 
-nav img{
+nav img {
   height: 45px;
 }
 
-nav ul a{
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul a {
   font-size: 24px;
   color: var(--green);
   text-decoration: none;
-  margin: 0 35px;
 }
 
-section{
+section {
   height: 1500px;
   background: purple;
+}
+
+/* RESPONSIVIDADE */
+
+/* Break Point */
+
+@media (max-width: 1000px) {
+  header .container {
+    width: 100%;
+  }
+
+nav{
+  padding: 0 30px;
+}
+
+  nav ul a {
+    font-size: 18px;
+  }
+}
+
+
+/* tablet */
+@media (max-width: 767px) {
+  header .container img {
+    display: inline;
+    margin-bottom: 70px;
+  }
+
+  nav img {
+    display: none;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+}
+
+nav ul a {
+  font-size: 16px;
+}
+
+/* celular */
+@media (max-width: 480px) {
+  header .container {
+    padding: 0 40px;
+  }
 }
